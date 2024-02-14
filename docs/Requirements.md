@@ -12,17 +12,17 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to create at least one category for symptom organization.
 
-  &nbsp;&nbsp;&nbsp; - Priority: High priority
+  &nbsp;&nbsp;&nbsp; - Priority: Optional
 
   &nbsp;&nbsp;&nbsp; - Dependencies:
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 10/31/23
+  &nbsp;&nbsp;&nbsp; - History: Createdd 10/31/23, Updated 2/14/24
 
-- Requirement # 2: The product will allow user to create symptoms to track and select which category they wish to place the symptom into (ex. Symptom chest pain may be placed in cardiovascular category)
+- Requirement # 2: The product will allow user to create symptoms to track
 
-  &nbsp;&nbsp;&nbsp; - Rationale: Users need to have the ability to create a custom symptom to track and choose which category to place the symptom so the set up best fits the needs of the user. 
+  &nbsp;&nbsp;&nbsp; - Rationale: Users need to have the ability to create a custom symptom to track to best fit the needs of the user. 
 
   &nbsp;&nbsp;&nbsp; - Originator: Jessica Taylor
 
@@ -30,12 +30,12 @@
 
   &nbsp;&nbsp;&nbsp; - Priority: high priority
 
-  &nbsp;&nbsp;&nbsp; - Dependencies: Requirement # 1 (Every symptom entry must be placed into a category. If a custom category is not created by user, then symptom entry will be placed into "All Symptoms" category).
+  &nbsp;&nbsp;&nbsp; - Dependencies: 
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 10/31/23
-
+  &nbsp;&nbsp;&nbsp; - History: Created 10/31/23, Updated 2/14/24
+  
 - Requirement # 3: For each symptom, the product will allow the user to select time of day that the symptom occurs
 
   &nbsp;&nbsp;&nbsp; - Rationale: It is beneficial for users to track time of day symptom occurs to identify patterns in symptom occurance. 
@@ -116,7 +116,7 @@
 
   &nbsp;&nbsp;&nbsp; - History: 10/31/23
 
-- Requirement # 8: The product will generate a daily symptom score for each category based on symptom input from past 24 hours
+- Requirement # 8: The product will generate a daily symptom score based on symptom input from past 24 hours
 
   &nbsp;&nbsp;&nbsp; - Rationale: It is beneficial for users to see overall symptom severity per category per day to gain a better understanding of symptom control and affect on quality of life.  
 
@@ -130,7 +130,7 @@
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 10/31/23
+  &nbsp;&nbsp;&nbsp; - History: Created 10/31/23, Updated 2/14/24
 
 - Requirement # 9: The product will generate a daily symptom score for each symptom based on symptom input from past 24 hours
 
@@ -140,13 +140,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The product will generate a score which depends on symptom severity. 0 indicates no entries for that symptom. A 1 will be assigned to each mild symptom score entered for that symptom. A 2 will be assigned to each moderate symptom score entered for that symptom. A 3 will be assigned to each severe symptom score entered for that symptom. A 4 will be assigned to each debilitating symptom score entered for that symptom. Each symptom score entery will be added up to give the 24 hour symptom score for each symptom. Score will be generated at 12:00 am and avaiable for user preview within one minute. 
 
-  &nbsp;&nbsp;&nbsp; - Priority: Medium priority
+  &nbsp;&nbsp;&nbsp; - Priority: Optional
 
   &nbsp;&nbsp;&nbsp; - Dependencies: 
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 10/31/23
+  &nbsp;&nbsp;&nbsp; - History: Created 10/31/23, Updated 2/14/24
 
   ## Lifestyle Log:
 
@@ -158,13 +158,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to add or select one or more lifestyle factors. 
 
-  &nbsp;&nbsp;&nbsp; - Priority: Medium priority
+  &nbsp;&nbsp;&nbsp; - Priority: Optional
 
   &nbsp;&nbsp;&nbsp; - Dependencies:
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/6/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/6/23, Updated 2/14/24
 
 - Requirement # 11: The product will allow user to document time of day of lifestyle factor.
 
@@ -174,13 +174,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to select time of day of lifestyle factor (morning, afternoon, evening, night). 
 
-  &nbsp;&nbsp;&nbsp; - Priority: Medium priority
+  &nbsp;&nbsp;&nbsp; - Priority: Optional
 
   &nbsp;&nbsp;&nbsp; - Dependencies: Requirement # 10 (need lifestyle factor in order to document time of day of lifestyle factor)
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/6/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/6/23, Updated 2/14/24
 
 - Requirement # 12: The product will allow user to measure lifestyle factor.
 
@@ -190,13 +190,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to measure lifestyle factor based on type of lifestyle factor. For example, caffeine intake can be measured by exact amount of caffeine (mg) or a less exact measurement (a little, moderate, a lot). The user may wish to measure exercise based on amount of time spent exercising or intensity of exercise.
 
-  &nbsp;&nbsp;&nbsp; - Priority: Medium priority
+  &nbsp;&nbsp;&nbsp; - Priority: Optional
 
   &nbsp;&nbsp;&nbsp; - Dependencies: Requirement # 10 (need lifestyle factor in order to measure the lifestyle factor)
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/6/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/6/23, Updated 2/14/24
 
 ## Medication Log:
 
@@ -206,7 +206,7 @@
 
   &nbsp;&nbsp;&nbsp; - Originator: Jessica Taylor
 
-  &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to add one or medications. Each medication entry will offer an additional entry for the medication dosage, time of day medication is taken, alternative medication name(s), medication prescriber, directions given by prescriber/pharmacy.
+  &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to add one or more medications. Each medication entry will offer an additional entry for the medication dosage, time of day medication is taken, alternative medication name(s), medication prescriber, directions given by prescriber/pharmacy.
 
   &nbsp;&nbsp;&nbsp; - Priority: High priority
 
@@ -224,13 +224,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to select which medication they wish to log. The product will automatically time stamp the entry at the time the user logs the medication. If the medication was not taken at time of entry, then user can change the time stamp. 
 
-  &nbsp;&nbsp;&nbsp; - Priority: High priority
+  &nbsp;&nbsp;&nbsp; - Priority: Optional
 
   &nbsp;&nbsp;&nbsp; - Dependencies: Requirement # 13 (there must be a medication in order to log time of day medication is taken)
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/6/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/6/23, Updated 2/14/24
 
 ## Reminders/Tasks/Goals:
 
@@ -242,13 +242,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to set a custom name for the reminder. The user can set the time of day they wish to set the reminder for. More than one time of day may be selected for each reminder. The user can also select which day(s) they wish to be reminded to take the medication. The user will be able to select whether they wish to be reminded every day, every other day, every 3 days, once a week, every other week, every 3 weeks, once a month, etc. 
 
-  &nbsp;&nbsp;&nbsp; - Priority: High priority
+  &nbsp;&nbsp;&nbsp; - Priority: Optional
 
   &nbsp;&nbsp;&nbsp; - Dependencies: 
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/6/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/6/23, Updated 2/14/24
 
 - Requirement # 16: The product will allow users to add customized tasks/goals (exercise, PT, water goal, step goal, stand goal, etc.).
 
@@ -258,13 +258,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to add one or more tasks/goals and check the task/goal off the list once completed. The product will allow user to choose whether the task/goal is a one time thing or if it is to repeat (daily, weekly, monthly, etc.)
 
-  &nbsp;&nbsp;&nbsp; - Priority: High priority
+  &nbsp;&nbsp;&nbsp; - Priority: Optional
 
   &nbsp;&nbsp;&nbsp; - Dependencies: 
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/6/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/6/23, Updated 2/14/24
 
 ## Notes:
 
@@ -276,13 +276,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to create one or more categories.
 
-  &nbsp;&nbsp;&nbsp; - Priority: Medium priority
+  &nbsp;&nbsp;&nbsp; - Priority: Optional
 
   &nbsp;&nbsp;&nbsp; - Dependencies: 
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/6/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/6/23, Updated 2/14/24
 
 - Requirement # 18: The product will allow user to add appointment note (symptom rundown, medication effects/side effects, questions/answers, plan).
 
@@ -292,13 +292,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to create one or more notes and place each note into a category.
 
-  &nbsp;&nbsp;&nbsp; - Priority: High priority
+  &nbsp;&nbsp;&nbsp; - Priority: Medium priority
 
-  &nbsp;&nbsp;&nbsp; - Dependencies: Requirement #17 (each note needs to be placed in a category). 
+  &nbsp;&nbsp;&nbsp; - Dependencies:  
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/6/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/6/23, Updated 2/14/24
 
 - Requirement # 19: The product will allow user to record appointment (voice recording and/or transcribed notes).
 
@@ -342,13 +342,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The product will record one heart rate measurement with a time stamp when user manually records a heart rate measurement
 
-  &nbsp;&nbsp;&nbsp; - Priority: High Priority
+  &nbsp;&nbsp;&nbsp; - Priority: Medium Priority
 
-  &nbsp;&nbsp;&nbsp; - Dependencies: Requirement #17 The recordings will be kept in the pre existing folder/category for health measurements. 
+  &nbsp;&nbsp;&nbsp; - Dependencies: 
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/13/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/13/23, Updated 2/14/24
 
 - Requirement # 22: The product will allow synchronization with user’s apple watch to track user’s blood oxygen.
 
@@ -374,13 +374,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The product will record one blood oxygen measurement with a time stamp when user manually records a blood oxygen measurement
 
-  &nbsp;&nbsp;&nbsp; - Priority: High Priority
+  &nbsp;&nbsp;&nbsp; - Priority: Medium Priority
 
-  &nbsp;&nbsp;&nbsp; - Dependencies: Requirement #17 The recordings will be kept in the pre existing folder/category for health measurements. 
+  &nbsp;&nbsp;&nbsp; - Dependencies:  
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/13/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/13/23, Updated 2/14/24
 
 - Requirement # 24: The product will allow synchronization with user’s apple watch to track user’s step count.
 
@@ -406,13 +406,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The product will record and save step count (with a time stamp) manually entered by user
 
-  &nbsp;&nbsp;&nbsp; - Priority: High Priority
+  &nbsp;&nbsp;&nbsp; - Priority: Medium Priority
 
-  &nbsp;&nbsp;&nbsp; - Dependencies: Requirement #17 The recordings will be kept in the pre existing folder/category for health measurements. 
+  &nbsp;&nbsp;&nbsp; - Dependencies: 
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/13/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/13/23, Updated 2/14/24
 
 - Requirement # 26: The product will allow synchronization with user’s iPhone Health App to track user’s blood pressure.
 
@@ -438,13 +438,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The product will record and save blood pressure (with a time stamp) manually entered by user
 
-  &nbsp;&nbsp;&nbsp; - Priority: High Priority
+  &nbsp;&nbsp;&nbsp; - Priority: Medium Priority
 
-  &nbsp;&nbsp;&nbsp; - Dependencies: Requirement #17 The recordings will be kept in the pre existing folder/category for health measurements. 
+  &nbsp;&nbsp;&nbsp; - Dependencies: 
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/13/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/13/23, Updated 2/14/24
 
 - Requirement # 28: The product will allow user the option to manually input blood glucose reading.
 
@@ -454,13 +454,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The product will record and save blood glucose (with a time stamp) manually entered by user
 
-  &nbsp;&nbsp;&nbsp; - Priority: High Priority
+  &nbsp;&nbsp;&nbsp; - Priority: Medium Priority
 
-  &nbsp;&nbsp;&nbsp; - Dependencies: Requirement #17 The recordings will be kept in the pre existing folder/category for health measurements. 
+  &nbsp;&nbsp;&nbsp; - Dependencies: 
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/13/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/13/23, Updated 2/14/24
 
 # Requirement Type 2 - Security:
 
@@ -472,13 +472,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: Through use of Apple HealthKit, this product will allow users to explicitly grant the app permission to read and write data to the HealthKit store. Users can grant or deny permission separately for each type of data. In addition, the user’s device stores all HealthKit data locally. For security, the device encrypts the HealthKit store when the user locks the device. 
 
-  &nbsp;&nbsp;&nbsp; - Priority: High Priority
+  &nbsp;&nbsp;&nbsp; - Priority: Optional
 
   &nbsp;&nbsp;&nbsp; - Dependencies: 
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials: https://developer.apple.com/documentation/healthkit/protecting_user_privacy
 
-  &nbsp;&nbsp;&nbsp; - History: 11/14/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/14/23, Updated 2/14/24
 
 - Requirement # 30: The product will securely store user data and only grant access of user data to peritted devices using Apple CloudKit. 
 
@@ -488,13 +488,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: Through use of Apple CloudKit, this product will ensure each container’s private database is protected by a key hierarchy, rooted in an asymmetric key called a CloudKit Service key. These keys are unique to each iCloud user and generated on their trusted device. 
 
-  &nbsp;&nbsp;&nbsp; - Priority: High Priority
+  &nbsp;&nbsp;&nbsp; - Priority: Optional
 
   &nbsp;&nbsp;&nbsp; - Dependencies: 
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials: https://support.apple.com/guide/security/icloud-encryption-
 
-  &nbsp;&nbsp;&nbsp; - History: 11/15/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/15/23, Updated 2/14/24
 
 # Requirement Type 3 - Usability:
 
