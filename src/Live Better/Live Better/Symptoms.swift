@@ -19,7 +19,7 @@ class Symptoms {
     var aggravatingFactors: String //add any factors that worsen symptom
     var note: String //add note to symptom entry
     
-    init(date: Date, symptomName: String, timeOfDay: String, symptomSeverity: String, relievingFactors: String, aggravatingFactors: String, note: String) {
+    init(date: Date = .now, symptomName: String, timeOfDay: String, symptomSeverity: String, relievingFactors: String, aggravatingFactors: String, note: String) {
         self.date = date
         self.symptomName = symptomName
         self.timeOfDay = timeOfDay
