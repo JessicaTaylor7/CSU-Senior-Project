@@ -35,7 +35,7 @@ but Live Better should make things easier.
 
 ### UNIT TEST STRATEGY / EXTENT OF UNIT TESTING:
 
-Evaluate new features and bug fixes introduced in this release
+Evaluate features and bug fixes that exist in this initial version of the Live Better application
 
 ### UNIT TEST CASES
 
