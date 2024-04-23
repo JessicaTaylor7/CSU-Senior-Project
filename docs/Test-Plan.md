@@ -31,7 +31,7 @@ but Live Better should make things easier.
 
 - Jessica Taylor
 
-## Manual TEST SECTION
+## MANUAL TEST SECTION
 
 ### MANUAL TEST STRATEGY / EXTENT OF MANUAL TESTING:
 
