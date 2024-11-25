@@ -36,13 +36,13 @@
 
   &nbsp;&nbsp;&nbsp; - History: Created 10/31/23, Updated 2/14/24
   
-- Requirement # 3: For each symptom, the product will allow the user to select time of day that the symptom occurs
+- Requirement # 3: For each symptom, the product will allow the user to select time and date of symptom occurance
 
   &nbsp;&nbsp;&nbsp; - Rationale: It is beneficial for users to track time of day symptom occurs to identify patterns in symptom occurance. 
 
   &nbsp;&nbsp;&nbsp; - Originator: Jessica Taylor
 
-  &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to select time of day of symptom occurance (morning, afternoon, evening, night).
+  &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to select a time and date of symptom occurance (ex. Apr 12, 2024 at 3:30pm).
 
   &nbsp;&nbsp;&nbsp; - Priority: high priority
 
@@ -50,7 +50,7 @@
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 10/31/23
+  &nbsp;&nbsp;&nbsp; - History: Created 10/31/23, Updated 11/25/24
 
 - Requirement # 4: For each symptom, the product will allow the user to document symptom severity.
 
@@ -58,7 +58,7 @@
 
   &nbsp;&nbsp;&nbsp; - Originator: Jessica Taylor
 
-  &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to select severity of symptom occurance (mild, moderate, severe, debilitating).
+  &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to select severity of symptom occurance (mild, moderate, severe, unbearable).
 
   &nbsp;&nbsp;&nbsp; - Priority: high priority
 
@@ -108,13 +108,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to add one or more notes associated with symptom entry. 
 
-  &nbsp;&nbsp;&nbsp; - Priority: Low priority
+  &nbsp;&nbsp;&nbsp; - Priority: High priority
 
   &nbsp;&nbsp;&nbsp; - Dependencies: Requirement # 2 (need a symptom to log aggrevating factors).
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 10/31/23
+  &nbsp;&nbsp;&nbsp; - History: Created 10/31/23, Updated 11/25/24
 
 - Requirement # 8: The product will generate a daily symptom score based on symptom input from past 24 hours
 
@@ -124,13 +124,13 @@
 
   &nbsp;&nbsp;&nbsp; - Fit Criterion: The product will generate a score which depends on symptom severity. 0 indicates no entries for that category. A 1 will be assigned to each mild symptom score entered in the category. A 2 will be assigned to each moderate symptom score entered in the category. A 3 will be assigned to each severe symptom score entered in the category. A 4 will be assigned to each debilitating symptom score entered in the category. Each symptom score entery will be added up to give the 24 hour category symptom score. Score will be generated at 12:00 am and avaiable for user preview within one minute. 
 
-  &nbsp;&nbsp;&nbsp; - Priority: Medium priority
+  &nbsp;&nbsp;&nbsp; - Priority: Optional
 
   &nbsp;&nbsp;&nbsp; - Dependencies: 
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: Created 10/31/23, Updated 2/14/24
+  &nbsp;&nbsp;&nbsp; - History: Created 10/31/23, Updated 2/14/24, 11/25/24
 
 - Requirement # 9: The product will generate a daily symptom score for each symptom based on symptom input from past 24 hours
 
@@ -146,7 +146,7 @@
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: Created 10/31/23, Updated 2/14/24
+  &nbsp;&nbsp;&nbsp; - History: Created 10/31/23, Updated 2/14/24, 11/25/24
 
   ## Lifestyle Log:
 
@@ -200,13 +200,13 @@
 
 ## Medication Log:
 
-- Requirement # 13: The product will allow user to input list of medications and associated information (dosage, alternative name, etc.)
+- Requirement # 13: The product will allow user to input list of medications and associated information (dosage, note, etc.)
 
   &nbsp;&nbsp;&nbsp; - Rationale: Allows user to keep track of their medications in one place on one application. 
 
   &nbsp;&nbsp;&nbsp; - Originator: Jessica Taylor
 
-  &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to add one or more medications. Each medication entry will offer an additional entry for the medication dosage, time of day medication is taken, alternative medication name(s), medication prescriber, directions given by prescriber/pharmacy.
+  &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to add one or more medications. Each medication entry will offer an additional entry for the medication dosage and note.
 
   &nbsp;&nbsp;&nbsp; - Priority: High priority
 
@@ -214,7 +214,7 @@
 
   &nbsp;&nbsp;&nbsp; - Supporting Materials:
 
-  &nbsp;&nbsp;&nbsp; - History: 11/6/23
+  &nbsp;&nbsp;&nbsp; - History: Created 11/6/23, Updated 11/25/24
 
 - Requirement # 14: The product will allow user to log time of day medication is taken.
 
@@ -222,9 +222,9 @@
 
   &nbsp;&nbsp;&nbsp; - Originator: Jessica Taylor
 
-  &nbsp;&nbsp;&nbsp; - Fit Criterion: The user will be able to select which medication they wish to log. The product will automatically time stamp the entry at the time the user logs the medication. If the medication was not taken at time of entry, then user can change the time stamp. 
+  &nbsp;&nbsp;&nbsp; - Fit Criterion: The product will automatically time stamp the entry at the time the user logs the medication. If the medication was not taken at time of entry, then user can change the time stamp. 
 
-  &nbsp;&nbsp;&nbsp; - Priority: Optional
+  &nbsp;&nbsp;&nbsp; - Priority: High priority
 
   &nbsp;&nbsp;&nbsp; - Dependencies: Requirement # 13 (there must be a medication in order to log time of day medication is taken)
 
@@ -480,7 +480,7 @@
 
   &nbsp;&nbsp;&nbsp; - History: Created 11/14/23, Updated 2/14/24
 
-- Requirement # 30: The product will securely store user data and only grant access of user data to peritted devices using Apple CloudKit. 
+- Requirement # 30: The product will securely store user data and only grant access of user data to permitted devices using Apple CloudKit. 
 
   &nbsp;&nbsp;&nbsp; - Rationale: This product, which contains sensitive personal health information, must be secure to ensure privacy of personal health data.   
 
@@ -496,9 +496,25 @@
 
   &nbsp;&nbsp;&nbsp; - History: Created 11/15/23, Updated 2/14/24
 
+  - Requirement # 31: If the product is not utilizing CloudKit, the user's data will be stored locally using SwiftData 
+
+  &nbsp;&nbsp;&nbsp; - Rationale: By storing data locally, the product eliminates the possibility of a security breach in a cloud database thereby, exposing the user's data   
+
+  &nbsp;&nbsp;&nbsp; - Originator: Jessica Taylor
+
+  &nbsp;&nbsp;&nbsp; - Fit Criterion: Through use of Apple SwiftData, user data will be securely stored and persisted in the application 
+
+  &nbsp;&nbsp;&nbsp; - Priority: High priority
+
+  &nbsp;&nbsp;&nbsp; - Dependencies: 
+
+  &nbsp;&nbsp;&nbsp; - Supporting Materials: https://developer.apple.com/documentation/swiftdata/
+
+  &nbsp;&nbsp;&nbsp; - History: Created 11/15/23, Updated 2/14/24, 11/25/24
+
 # Requirement Type 3 - Usability:
 
-- Requirement # 31: This product will be user-friendly.
+- Requirement # 32: This product will be user-friendly.
 
   &nbsp;&nbsp;&nbsp; - Rationale: This product needs to be user friendly, or users will not be willing to use it. Users often do not want to spend more than a few minutes learning how to use an application. 
 
