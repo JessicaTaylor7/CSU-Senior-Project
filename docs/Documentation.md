@@ -11,7 +11,7 @@
 - [FUTURE ENHANCEMENTS](#future-enhancements)
 - [DEFENSE PRESENTATION SLIDES](#defense-presentation-slides)
 
-## PROJECT INFORMATION 
+### PROJECT INFORMATION 
 
 - **Project Title:** Live Better
 - **Date Completed:** November 25, 2024
