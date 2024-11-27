@@ -6,7 +6,7 @@
 - [LANGUAGES, SOFTWARE, HARDWARE](#languages-software-hardware)
 - [PROJECT REQUIREMENTS](#project-requirements)
 - [IMPLEMENTATION DESCRIPTION AND EXPLANATION](#implementation-description-explanation)
-- [TEST PLAN AND RESULTS:](#test-plan-and-results)
+- [TEST PLAN AND RESULTS](#test-plan-and-results)
 - [CHALLENGES OVERCOME](#challenges-overcome)
 - [FUTURE ENHANCEMENTS](#future-enhancements)
 - [DEFENSE PRESENTATION SLIDES](#defense-presentation-slides)
@@ -65,11 +65,26 @@ Making modifications to the current structure of some of the well-known symptom 
 
 [Link to my project requirements GitHub file](https://github.com/JessicaTaylor7/CSU-Senior-Project/blob/master/docs/Requirements.md)
 
-
 ### IMPLEMENTATION DESCRIPTION AND EXPLANATION
 
-[Link to my project design and features GitHub file](https://github.com/JessicaTaylor7/CSU-Senior-Project/blob/master/docs/DesignAndFeatures.md)
+[Link to my project design and features GitHub file](https://github.com/JessicaTaylor7/CSU-Senior-Project/blob/master/docs/DesignAndFeatures.pdf)
 
 [Link to my project source code GitHub repository](https://github.com/JessicaTaylor7/CSU-Senior-Project/tree/master/src/LiveBetter)
+
+### TEST PLAN AND RESULTS
+
+[Link to my project test plan and results GitHub file](https://github.com/JessicaTaylor7/CSU-Senior-Project/blob/master/docs/Test-Plan.md)
+
+### CHALLENGES OVERCOME
+
+Throughout this project, I have overcome many challenges. The first major challenge I experienced is learning the Swift syntax with addition of SwiftUI and SwiftData as this is not a language that I have learned in pursuit of my degree. Swift is not necessarily a difficult language to learn, I just find it different in that it does so much behind the scenes and the programmer needs to know how to use the libraries offered. 
+
+Another challenge I experienced on multiple occasions is my project crashing and throwing errors. This has been an incredibly frustrating obstacle and one that I still have not figured out. Based on my research, it appears many other non-paid developers have experienced similar problems and many have chalked it up to a random bug in XCode. I have found that to overcome this challenge, I have to copy and paste my project files elsewhere, delete my project files in XCode, and then copy and paste my project files back into XCode under a new project name. 
+
+Additionally, keeping my project files and GitHub repository files stored in multiple places saved my entire project during the construction phase when I accidentally deleted my entire project repository from GitHub while trying to link my respository with XCode. I'm so happy I was able to just create a new repository and upload everything into the new repository because I had it saved on my computer and in my iCloud...this incident definitely made me thankful for keeping backups!
+
+Lastly and most importantly, I had to work around a major change Apple implemented over the summer with non-paid developer accounts being significantly limited in what features can be used. This change affected my ability to use CloudKit for cloud based data storage along with HealthKit for synching health data from a user's Apple Watch to LiveBetter in the Health Measurements tab. Additionally, this also prevented me from using TestFlight which would allow my friends and family to install a version of LiveBetter on their iPhone for beta testing. Due to this, I had to allow them to test the application on my laptop. Non of this is ideal and it significantly limited the features I originally intended on having in my application; however, it gives me a lot to discuss in the future enhancements section. 
+
+### FUTURE ENHANCEMENTS
 
 
