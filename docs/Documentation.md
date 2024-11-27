@@ -100,4 +100,4 @@ In the future, I may consider paying the annual fee for paid Apple Developer acc
 
 ### DEFENSE PRESENTATION SLIDES
 
-
+[Link to my project presentation GitHub file](https://github.com/JessicaTaylor7/CSU-Senior-Project/blob/master/docs/DefensePresentation.pdf)
