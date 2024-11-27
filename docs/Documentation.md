@@ -87,4 +87,17 @@ Lastly and most importantly, I had to work around a major change Apple implement
 
 ### FUTURE ENHANCEMENTS
 
+In the future, I may consider paying the annual fee for paid Apple Developer account, which will grant me access to features such as CloudKit, HealthKit, FireBase, and TestFlight. With this, I can greatly improve LiveBetter making the application more usable. Below is a list of future enhancements for the LiveBetter application:
+
+- Utilize FireBase to implement cloud based login functionality, adding to application security
+- Utilize CloudKit instead of SwiftData for a cloud based database. This also allows for use of HealthKit
+- Utilize HealthKit for synchronization of health data, such as step count, heart rate, blood glucose, etc. in Health tab
+- Allow users to create pre-made symptom and medication data to make entries more convenient with the option to select a pre-made symptom or  medication and simply edit time/date and other relevent information.
+- Add additional features such as alerts/reminders for medications/appointments, appointment information/notes, lifestyle factors log, and 
+  maybe even the ability to take voice recordings of appointments or have an AI feature that can take written notes.
+- Improve the aesthetic of the application by adding a calming neutral color scheme and make the overall look of the app feel more professional
+- Allow beta testing of the application using TestFlight, so I can receive feedback after others have spent time testing it
+
+### DEFENSE PRESENTATION SLIDES
+
 
