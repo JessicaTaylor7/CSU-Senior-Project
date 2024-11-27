@@ -10,65 +10,81 @@ import SwiftUI
 import SwiftData
 
 struct SymptomsView: View {
-    // SwiftData container
+    // Access the environment's model context to interact with the data store
     @Environment(\.modelContext) var context
     
-    // Query Symptoms database and sort symptom log by date (most recent on top)
+    // Query to fetch symptoms from the data store, sorted by date in reverse order (most recent first)
     @Query(sort: \Symptoms.date, order: .reverse) var symptoms: [Symptoms]
-       
-    // This is the add symptom sheet view which is initialized to false and changes to true when '+' is tapped
+    
+    // State variable to control the visibility of the sheet for adding a new symptom
     @State private var isShowingSymptomSheet = false
-    // Makes symptom entries editable
+    
+    // State variable to hold the symptom being edited (used for updating existing entries)
     @State private var editSymptom: Symptoms?
     
     var body: some View {
         NavigationStack {
-            //Symptom Log View
+            // Display a list of logged symptoms
             List {
-                // Lists symptom entries and allows entries to be edited when cell is tapped
+                // Loop through the list of symptoms and display each one
                 ForEach(symptoms) { symptom in
-                    SymptomLog(symptom: symptom)
-                        .onTapGesture {
-                            editSymptom = symptom
-                        }
+                    // Each symptom is a NavigationLink to the update view for that specific symptom
+                    NavigationLink(destination: UpdateSymptomSheet(symptom: symptom)) {
+                        // Custom view to display symptom details
+                        SymptomLog(symptom: symptom)
+                    }
+                    .buttonStyle(PlainButtonStyle()) // Makes the link look like a standard list item
                 }
-                // Allows symptom entries to be deleted when user swipes left
+                // Enable deletion of symptoms from the list
                 .onDelete { indexSet in
                     for index in indexSet {
-                        context.delete(symptoms[index])
+                        context.delete(symptoms[index]) // Remove symptom from the data store
                     }
                 }
             }
-            // User is viewing symptom log view and user can add new symptom
-            .sheet(isPresented: $isShowingSymptomSheet) { AddSymptomSheet() }
-            // Allow user to update symptom in symptom log view
+            // Sheet to display the AddSymptomSheet when adding a new symptom
+            .sheet(isPresented: $isShowingSymptomSheet) {
+                AddSymptomSheet()
+            }
+            // Sheet to display the UpdateSymptomSheet when editing an existing symptom
             .sheet(item: $editSymptom) { symptom in
                 UpdateSymptomSheet(symptom: symptom)
             }
-            // If user is viewing the symptom log view, then add button in toolbar which shows the add symptom sheet view when tapped
+            // Add toolbar with a "+" button when there are symptoms in the list
             .toolbar {
                 if !symptoms.isEmpty {
                     Button("Add Symptom", systemImage: "plus") {
+                        // Show the sheet to add a new symptom
                         isShowingSymptomSheet = true
                     }
                 }
             }
-            // If there are no logged symptoms to view, show user an initital sheet that prompts them to start adding symptoms
+            // Overlay a message and button when the symptom list is empty
             .overlay {
                 if symptoms.isEmpty {
-                    ContentUnavailableView(label: {
-                        Label("No Symptoms", systemImage: "cross.circle.fill")
-                    }, description: {
-                        Text("Start adding enteries to view your symptom history.")
-                    }, actions: {
-                        Button("Add Symptom") { isShowingSymptomSheet = true }
-                    })
-                    .offset(y: -60)
+                    ContentUnavailableView(
+                        label: {
+                            // Display a label with an icon when no entries are present
+                            Label("No Symptoms", systemImage: "cross.circle.fill")
+                        },
+                        description: {
+                            // Provide a description encouraging the user to add an entry
+                            Text("Start adding entries to view your symptom history.")
+                        },
+                        actions: {
+                            // Button to show the AddSymptomSheet
+                            Button("Add Symptom") {
+                                isShowingSymptomSheet = true
+                            }
+                        }
+                    )
+                    .offset(y: -60) // Adjust position of the overlay
                 }
             }
         }
     }
 }
+
     
 // This is the view that shows previously logged symptoms
 struct SymptomLog: View {
@@ -107,7 +123,7 @@ struct SymptomLog: View {
             return .red
         }
         else {
-            return .black
+            return .white
         }
     }
 }
@@ -220,6 +236,3 @@ struct UpdateSymptomSheet: View {
 
         
     
-
-
-

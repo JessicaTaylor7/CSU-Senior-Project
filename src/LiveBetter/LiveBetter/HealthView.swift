@@ -10,66 +10,81 @@ import SwiftUI
 import SwiftData
 
 struct HealthView: View {
-    // SwiftData container
+    // Access the environment's model context to interact with the data store
     @Environment(\.modelContext) var context
     
-    // Query Measurements database and sort health log by date (most recent on top)
+    // Query to fetch measurements from the data store, sorted by date in reverse order (most recent first)
     @Query(sort: \Measurements.date, order: .reverse) var measurements: [Measurements]
     
-    // This is the add measurement sheet view which is initialized to false and changes to true when '+' is tapped
+    // State variable to control the visibility of the sheet for adding a new measurement
     @State private var isShowingMeasurementSheet = false
-    // Makes measurement entries editable
+    
+    // State variable to hold the measurement being edited (used for updating existing entries)
     @State private var editMeasurement: Measurements?
     
     var body: some View {
         NavigationStack {
-            //Measurement Log View
+            // Display a list of health measurements
             List {
-                // Lists measurement entries and allows entries to be edited when cell is tapped
+                // Loop through the list of measurements and display each one
                 ForEach(measurements) { measurement in
-                    HealthLog(measurement: measurement)
-                        .onTapGesture {
-                            editMeasurement = measurement
-                        }
+                    // Each measurement is a NavigationLink to the update view for that specific measurement
+                    NavigationLink(destination: UpdateMeasurementSheet(measurement: measurement)) {
+                        // Custom view to display measurement details
+                        HealthLog(measurement: measurement)
+                    }
+                    .buttonStyle(PlainButtonStyle()) // Makes the link look like a standard list item
                 }
-                // Allows measurement entries to be deleted when user swipes left
+                // Enable deletion of measurements from the list
                 .onDelete { indexSet in
                     for index in indexSet {
-                        context.delete(measurements[index])
+                        context.delete(measurements[index]) // Remove measurement from the data store
                     }
                 }
             }
-            // User is viewing health log view and user can add new enteries
-            .sheet(isPresented: $isShowingMeasurementSheet) { AddMeasurementSheet() }
-            // Allow user to update measurement in health log view
+            // Sheet to display the AddMeasurementSheet when adding a new measurement
+            .sheet(isPresented: $isShowingMeasurementSheet) {
+                AddMeasurementSheet()
+            }
+            // Sheet to display the UpdateMeasurementSheet when editing an existing measurement
             .sheet(item: $editMeasurement) { measurement in
                 UpdateMeasurementSheet(measurement: measurement)
             }
-            // If user is viewing the health log view, then add button in toolbar which shows the add measurement sheet view when tapped
-            .navigationTitle("Measurements")
+            // Add toolbar with a "+" button when there are measurements in the list
             .toolbar {
                 if !measurements.isEmpty {
                     Button("Add Entry", systemImage: "plus") {
+                        // Show the sheet to add a new measurement
                         isShowingMeasurementSheet = true
                     }
                 }
             }
-            // If there are no logged measurements to view, show user an initital sheet that prompts them to start adding entries
+            // Overlay a message and button when the measurement list is empty
             .overlay {
                 if measurements.isEmpty {
-                    ContentUnavailableView(label: {
-                        Label("No Entries", systemImage: "cross.circle.fill")
-                    }, description: {
-                        Text("Start adding enteries to view your measurement history.")
-                    }, actions: {
-                        Button("Add Entry") { isShowingMeasurementSheet = true }
-                    })
-                    .offset(y: -60)
+                    ContentUnavailableView(
+                        label: {
+                            // Display a label with an icon when no entries are present
+                            Label("No Entries", systemImage: "cross.circle.fill")
+                        },
+                        description: {
+                            // Provide a description encouraging the user to add an entry
+                            Text("Start adding entries to view your measurement history.")
+                        },
+                        actions: {
+                            // Button to show the AddMeasurementSheet
+                            Button("Add Entry") {
+                                isShowingMeasurementSheet = true
+                            }
+                        }
+                    )
+                    .offset(y: -60) // Adjust position of the overlay
                 }
             }
         }
     }
 }
+
 
 // This is the view that shows previously logged measurements
 struct HealthLog: View {
